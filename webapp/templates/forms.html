@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Fill the forms page{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<form action="{{ url_for('text_forms_enable') }}" method="post">
+    <label for="en">
+                <span>English text:
+                </span>
+        <textarea name="en" placeholder="English text" class="textarea-field">{{ filled_forms['en'] }}</textarea>
+    </label>
+    <label for="fr">
+                <span>French text:
+                </span>
+        <textarea name="fr" placeholder="French text" class="textarea-field">{{ filled_forms['fr'] }}</textarea>
+    </label>
+    <label for="de">
+                <span>German text:
+                </span>
+        <textarea name="de" placeholder="German text" class="textarea-field">{{ filled_forms['de'] }}</textarea>
+    </label>
+    <label for="es">
+                <span>Spanish text:
+                </span>
+        <textarea name="es" placeholder="Spanish text" class="textarea-field">{{ filled_forms['es'] }}</textarea>
+    </label>
+    <label><input type="submit" value="Submit"></label>
+</form>
+{% endblock %}

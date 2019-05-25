@@ -1,0 +1,186 @@
+__2019-05-25 11:36:24,787 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x056C0070>
+	kwargs: 
+__2019-05-25 11:36:24,811 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x056C0070>
+	kwargs: 
+__2019-05-25 11:37:03,622 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x053131B0>
+	kwargs: 
+__2019-05-25 11:37:03,641 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x053131B0>
+	kwargs: 
+__2019-05-25 11:37:33,373 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05B000B0>
+	kwargs: 
+__2019-05-25 11:37:33,389 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05B000B0>
+	kwargs: 
+__2019-05-25 11:37:53,546 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x059D31B0>
+	kwargs: 
+__2019-05-25 11:37:53,569 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x059D31B0>
+	kwargs: 
+__2019-05-25 11:47:39,621 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05310110>
+	kwargs: 
+__2019-05-25 11:47:39,633 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05310110>
+	kwargs: 
+__2019-05-25 11:49:01,698 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05340090>
+	kwargs: 
+__2019-05-25 11:49:01,717 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05340090>
+	kwargs: 
+__2019-05-25 11:49:53,792 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x03905910>
+	kwargs: 
+__2019-05-25 11:49:53,810 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x03905910>
+	kwargs: 
+__2019-05-25 11:49:53,819 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x03D40670>
+	kwargs: 
+__2019-05-25 11:49:53,827 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x03D40670>
+	kwargs: 
+__2019-05-25 11:49:53,829 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x03905910>
+	kwargs: 
+__2019-05-25 11:49:53,836 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x03905910>
+	kwargs: 
+__2019-05-25 11:49:53,843 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x056A3570>
+	kwargs: 
+__2019-05-25 11:49:53,847 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x056A3570>
+	kwargs: 
+__2019-05-25 11:50:26,663 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x053100B0>
+	kwargs: 
+__2019-05-25 11:50:26,679 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x053100B0>
+	kwargs: 
+__2019-05-25 11:50:26,693 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x0530F070>
+	kwargs: 
+__2019-05-25 11:50:26,697 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x0530F070>
+	kwargs: 
+__2019-05-25 11:50:26,704 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05316050>
+	kwargs: 
+__2019-05-25 11:50:26,712 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05316050>
+	kwargs: 
+__2019-05-25 11:50:26,721 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x053105D0>
+	kwargs: 
+__2019-05-25 11:50:26,730 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x053105D0>
+	kwargs: 
+__2019-05-25 11:50:58,131 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x055C0030>
+	kwargs: 
+__2019-05-25 11:50:58,149 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x055C0030>
+	kwargs: 
+__2019-05-25 11:50:58,164 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x055BF410>
+	kwargs: 
+__2019-05-25 11:50:58,170 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x055BF410>
+	kwargs: 
+__2019-05-25 11:50:58,180 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x055C6050>
+	kwargs: 
+__2019-05-25 11:50:58,187 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x055C6050>
+	kwargs: 
+__2019-05-25 11:50:58,198 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x055C0230>
+	kwargs: 
+__2019-05-25 11:50:58,206 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x055C0230>
+	kwargs: 
+__2019-05-25 11:51:20,499 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05FC00B0>
+	kwargs: 
+__2019-05-25 11:51:20,519 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05FC00B0>
+	kwargs: 
+__2019-05-25 11:51:20,541 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05FBF190>
+	kwargs: 
+__2019-05-25 11:51:20,549 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05FBF190>
+	kwargs: 
+__2019-05-25 11:51:20,566 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05FC6110>
+	kwargs: 
+__2019-05-25 11:51:20,575 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05FC6110>
+	kwargs: 
+__2019-05-25 11:51:20,594 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05FC0150>
+	kwargs: 
+__2019-05-25 11:51:20,600 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05FC0150>
+	kwargs: 
+__2019-05-25 11:51:51,396 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x04479B90>
+	kwargs: 
+__2019-05-25 11:51:51,405 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x04479B90>
+	kwargs: 
+__2019-05-25 11:51:51,421 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x061F0090>
+	kwargs: 
+__2019-05-25 11:51:51,426 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x061F0090>
+	kwargs: 
+__2019-05-25 11:51:51,437 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x061F8050>
+	kwargs: 
+__2019-05-25 11:51:51,444 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x061F8050>
+	kwargs: 
+__2019-05-25 11:51:51,462 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x061F31B0>
+	kwargs: 
+__2019-05-25 11:51:51,467 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x061F31B0>
+	kwargs: 
+__2019-05-25 11:52:21,410 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05313150>
+	kwargs: 
+__2019-05-25 11:52:21,431 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05313150>
+	kwargs: 
+__2019-05-25 11:52:21,451 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x053161D0>
+	kwargs: 
+__2019-05-25 11:52:21,460 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x053161D0>
+	kwargs: 
+__2019-05-25 11:52:21,478 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05313170>
+	kwargs: 
+__2019-05-25 11:52:21,489 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05313170>
+	kwargs: 
+__2019-05-25 11:52:21,513 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05318950>
+	kwargs: 
+__2019-05-25 11:52:21,524 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x05318950>
+	kwargs: 
+__2019-05-25 11:55:54,197 INFO in logger: Foo: __text_to_words runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x058D00D0>
+	kwargs: 
+__2019-05-25 11:55:54,211 INFO in logger: Foo: letters_scrabble runs with 
+	args: <webapp.text_scrabbling.TextProceedStrategy object at 0x058D00D0>
+	kwargs: 
