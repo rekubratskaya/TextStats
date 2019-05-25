@@ -3,6 +3,11 @@ import collections
 from os import listdir
 from langdetect import detect
 
+"""
+scipy: Chi-square test of independence of variables in a contingency table
+"""
+from scipy.stats import chi2_contingency
+
 from webapp.logger import function_logger
 from webapp.models import Language, Letters
 
@@ -13,6 +18,7 @@ text_to_test = {
     'es': "El libro narra la historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo.",
     'de': "Der Roman Hundert Jahre Einsamkeit begleitet sechs Generationen der Familie Buendía und hundert Jahre wirklichen Lebens in der zwar fiktiven Welt von Macondo."
 }
+
 
 class TextProceedStrategy:
 
@@ -31,8 +37,7 @@ class TextProceedStrategy:
         return words
 
     @function_logger
-    def letters_scrabble(self):
-        # TODO Add encoding in this part
+    def _letters_scrabble(self):
         """Split each word into equal parts"""
         chunks = list()
         for word in self.__text_to_words():
@@ -44,11 +49,9 @@ class TextProceedStrategy:
         self.res.update(collections.Counter(chunks))
         self._calc_chunks_frequency(self.res)
 
-
     @staticmethod
     @function_logger
     def _calc_chunks_frequency(res):
-        # TODO Add encoding in this part
         """
         Calculate each chunk frequency and update chunks dictionary with new values
         """
@@ -57,8 +60,22 @@ class TextProceedStrategy:
             res[key] = value / denominator
 
 
-class CalculateXi2Strategy:
-    pass
+class CalculateXi2Strategy(TextProceedStrategy):
+
+    def __init__(self, text: str, num: int):
+        super().__init__(text, num)
+        self._letters_scrabble()
+        self.observed_values = list(self.res.values())
+        self.expected_values = list()
+
+    @function_logger
+    def get_expected_array(self, iso2):
+        for k in self.res.keys():
+            t = Language.get(Language.language == iso2)
+            expected_frequency = Letters.select().where(Letters.lang == t.id, Letters.letters == k).first()
+            if not expected_frequency.exists():
+                expected_frequency = 0
+            self.expected_values.append(expected_frequency)
 
 
 if __name__ == '__main__':
@@ -76,13 +93,11 @@ if __name__ == '__main__':
             """
             Proceed 2 letters words
             """
-            proceeded_data_l2 = TextProceedStrategy(data, 2)
-            proceeded_data_l2.letters_scrabble()
+            proceeded_data_l2 = CalculateXi2Strategy(data, 2)
             """
             Proceed 3 letters words
             """
-            proceeded_data_l3 = TextProceedStrategy(data, 3)
-            proceeded_data_l3.letters_scrabble()
+            proceeded_data_l3 = CalculateXi2Strategy(data, 3)
 
             """
             Create letters and frequency queries in Letters database for both 2 and 3 letters words

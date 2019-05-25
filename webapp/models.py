@@ -1,8 +1,6 @@
 import os
 from peewee import *
 
-# from webapp.logger import function_logger
-
 db_proxy = Proxy()
 
 
@@ -39,10 +37,13 @@ else:
     db = SqliteDatabase('../langstat.db')
     db_proxy.initialize(db)
 
-if __name__ == '__main__':
+
+def initialize_db():
     db_proxy.connect()
     db_proxy.create_tables([Language, Letters])
-    # for each in Letters.select().where(Letters.lang == 1, fn.length(Letters.letters) == 2):
-    #     print(each)
     db_proxy.close()
+
+
+if __name__ == '__main__':
+    initialize_db()
 
