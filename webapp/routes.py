@@ -3,13 +3,6 @@ from langdetect import detect, lang_detect_exception
 
 from webapp import app
 from webapp.texting import CalculateXi2Strategy, text_to_test
-# from webapp.models import db_proxy
-
-
-# @app.before_request
-# def before_request():
-#     g.db = db_proxy
-#     g.db.connect()
 
 
 @app.route('/', methods=['POST', 'GET'])
@@ -52,9 +45,3 @@ def text_forms_enable():
         "text_to_test" dictionary is imported from "text_srabbling" module 
         '''
         return render_template('forms.html', filled_forms=text_to_test)
-
-
-# @app.after_request
-# def after_request(responce):
-#     g.db.close()
-#     return responce

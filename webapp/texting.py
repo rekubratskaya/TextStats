@@ -1,16 +1,9 @@
 import string
 import collections
 import os
-from langdetect import detect
-
-"""
-scipy: Chi-square test of independence of variables in a contingency table
-"""
-from scipy.stats import chi2_contingency, chisquare
-from numpy import array, corrcoef
+from scipy.stats import chisquare
 
 from webapp.logger import function_logger
-import csv
 
 
 text_to_test = {
