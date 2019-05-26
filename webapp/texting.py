@@ -80,7 +80,7 @@ class CalculateXi2Strategy(TextProceedStrategy):
 
         for entry in entries:
             print(entry)
-            with open(os.path.join(APP_TMP, entry), 'r') as f:
+            with open(os.path.join(APP_TMP, entry), 'r', encoding='utf-8', errors='surrogateescape') as f:
                 data = f.read()
                 iso_data = detect(data)
                 if not iso_data == iso2:
