@@ -1,5 +1,4 @@
 import logging
-import logging.handlers as hd
 from functools import wraps
 
 
@@ -28,11 +27,6 @@ level = logging.DEBUG
 log = logging.getLogger(__name__)
 log.setLevel(level)
 logFormatter = logging.Formatter("__%(asctime)s %(levelname)s in %(module)s: %(message)s")
-
-# fileHandler = hd.RotatingFileHandler('logs.log', mode='w', maxBytes=10000, backupCount=1, encoding='utf-8')
-# fileHandler.setLevel(level)
-# fileHandler.setFormatter(logFormatter)
-# log.addHandler(fileHandler)
 
 consoleHandler = logging.StreamHandler()
 consoleHandler.setLevel(level)

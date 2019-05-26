@@ -1,25 +1,17 @@
 import os
+from os import listdir
+from langdetect import detect
 from peewee import *
 
 db_proxy = Proxy()
 
 
-class Base(Model):
+class LetitbeDB(Model):
     class Meta:
         database = db_proxy
 
-
-class Language(Base):
     language = CharField(unique=True, max_length=3)
-
-
-class Letters(Base):
-    lang = ForeignKeyField(Language, backref='letters')
-    letters = CharField(max_length=3)
-    frequency = DoubleField()
-
-    def __str__(self):
-        return f"{self.lang.language}; letters: {self.letters}; frequency: {self.frequency}"
+    text = CharField(unique=True)
 
 
 if 'HEROKU' in os.environ:
@@ -38,12 +30,19 @@ else:
     db_proxy.initialize(db)
 
 
-def initialize_db():
-    db_proxy.connect()
-    db_proxy.create_tables([Language, Letters])
-    db_proxy.close()
-
-
 if __name__ == '__main__':
-    initialize_db()
+    db.connect()
+    db.create_tables([LetitbeDB], safe=True)
 
+    entries = listdir('tmp')
+
+    for entry in entries:
+        with open('tmp/' + entry, 'r') as f:
+            """
+            Read each text and detect its language
+            Create language query in Language database
+            """
+
+            data = f.read()
+            iso2 = detect(data)
+            LetitbeDB.create(language=iso2, text=data)
