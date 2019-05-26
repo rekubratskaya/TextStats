@@ -9,7 +9,7 @@ scipy: Chi-square test of independence of variables in a contingency table
 from scipy.stats import chi2_contingency
 
 from webapp.logger import function_logger
-from webapp.models import LetitbeDB, initialize_db
+from webapp.models import LetitbeDB
 
 
 text_to_test = {
