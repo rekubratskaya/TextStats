@@ -8,15 +8,18 @@
       <table>
             <tr>
                 <th>Language</th>
-                <th>Xi2 for 3-grams</th>
-                <th>Xi2 for 2-grams</th>
+                <th>Xi2 for 3-grams - </th>
+                <th>p-value</th>
+                <th>Xi2 for 2-grams - </th>
+                <th>p-value</th>
             </tr>
          {% for key, value in result.items() %}
-
             <tr>
                <td> {{ key }} </td>
-               <td> {{ value[0] }} </td>
-               <td> {{ value[1] }} </td>
+               <td> {{ value[0][0] }} </td>
+               <td> {{ value[0][1] }} </td>
+               <td> {{ value[1][0] }} </td>
+               <td> {{ value[1][1] }} </td>
             </tr>
          {% endfor %}
       </table>

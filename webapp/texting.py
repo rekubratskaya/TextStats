@@ -6,11 +6,11 @@ from langdetect import detect
 """
 scipy: Chi-square test of independence of variables in a contingency table
 """
-from scipy.stats import chi2_contingency
-from numpy import array
+from scipy.stats import chi2_contingency, chisquare
+from numpy import array, corrcoef
 
 from webapp.logger import function_logger
-# from webapp.models import LetitbeDB
+import csv
 
 
 text_to_test = {
@@ -67,41 +67,26 @@ class CalculateXi2Strategy(TextProceedStrategy):
         super().__init__(text, num)
         self._letters_scrabble()
         self.iso2 = iso2
-        self.observed_values = list(self.res.values())
+        self.observed_values = list()
         self.expected_values = list()
 
     @function_logger
     def _get_expected_array(self):
-        # base_text = LetitbeDB.get(LetitbeDB.language == iso2)
-        # base_letters_dict = TextProceedStrategy(base_text.text, 3)
-        # base_letters_dict._letters_scrabble()
-
-        APP_ROOT = os.path.dirname(os.path.abspath(__file__))  # refers to application_top
+        APP_ROOT = os.path.dirname(os.path.abspath(__file__))  # refers to TextStats main directory
         APP_TMP = os.path.join(APP_ROOT, 'tmp')
         with open(os.path.join(APP_TMP, self.iso2 + '.txt'), 'r', encoding='utf-8', errors='surrogateescape') as f:
             data = f.read()
             base_letters_dict = TextProceedStrategy(data, self.num)
             base_letters_dict._letters_scrabble()
-            for k in self.res.keys():
-                expected_frequency = base_letters_dict.res.get(k, 0)
+            for k, v in self.res.items():
+                expected_frequency = base_letters_dict.res.get(k)
+                if expected_frequency is None:
+                    continue
+                self.observed_values.append(v)
                 self.expected_values.append(expected_frequency)
 
     @function_logger
     def calculate_xi2(self):
         self._get_expected_array()
-        obs = array([self.observed_values, self.expected_values])
-        chi2, p, dof, ex = chi2_contingency(obs)
-        return chi2
-
-
-if __name__ == '__main__':
-
-    eng = text_to_test['en']
-    iso = detect(eng)
-    test = CalculateXi2Strategy(eng, 2, iso)
-    print(test.observed_values)
-    print(test.expected_values)
-
-    t = test.calculate_xi2()
-    print(t)
-
+        chi2, p_value = chisquare(self.observed_values, self.expected_values)
+        return round(chi2, 4), round(p_value, 4)
