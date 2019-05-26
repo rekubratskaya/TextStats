@@ -19,7 +19,7 @@ def text_forms_enable():
                 iso2 = detect(v)
                 if not k == iso2:
                     flash('Language mismatch: "{0}" was inserted in "{1}" form'.format(iso2, k))
-                    return render_template('forms.html', filled_forms=text_to_test)
+                    return render_template('stats.html', filled_forms=text_to_test)
 
                 treegrams = CalculateXi2Strategy(v, 3, iso2)
                 tree = treegrams.calculate_xi2()
@@ -28,7 +28,7 @@ def text_forms_enable():
                 bi = bigrams.calculate_xi2()
                 texts[k] = (tree, bi)
 
-            return render_template('raw.html', result=texts)
+            return render_template('stats.html', result=texts)
 
         except lang_detect_exception.LangDetectException as error:
             '''
@@ -37,11 +37,11 @@ def text_forms_enable():
             To avoid app crash, render the initial template and show flash message.
             '''
             flash('{0}: fill all fields'.format(error))
-            return render_template('forms.html', filled_forms=text_to_test)
+            return render_template('stats.html', filled_forms=text_to_test)
 
     else:
         '''
         Fill forms for advance, by adding "filled_forms" parameter with "text_to_test" dictionary
         "text_to_test" dictionary is imported from "text_srabbling" module 
         '''
-        return render_template('forms.html', filled_forms=text_to_test)
+        return render_template('stats.html', filled_forms=text_to_test)
