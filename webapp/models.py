@@ -34,10 +34,12 @@ if __name__ == '__main__':
     db.connect()
     db.create_tables([LetitbeDB], safe=True)
 
-    entries = listdir('tmp')
+    APP_ROOT = os.path.dirname(os.path.abspath(__file__))  # refers to application_top
+    APP_TMP = os.path.join(APP_ROOT, 'tmp')
+    entries = os.listdir(APP_TMP)
 
     for entry in entries:
-        with open('tmp/' + entry, 'r') as f:
+        with open(os.path.join(APP_TMP, entry), 'r', encoding='utf-8', errors='surrogateescape') as f:
             """
             Read each text and detect its language
             Create language query in Language database

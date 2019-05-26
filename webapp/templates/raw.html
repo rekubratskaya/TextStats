@@ -6,10 +6,17 @@
 {% block content %}
 
       <table>
-         {% for key, value in result.items() %}
             <tr>
-               <th> {{ key }} </th>
-               <td> {{ value }} </td>
+                <th>Language</th>
+                <th>Xi2 for 3-grams</th>
+                <th>Xi2 for 2-grams</th>
+            </tr>
+         {% for key, value in result.items() %}
+
+            <tr>
+               <td> {{ key }} </td>
+               <td> {{ value[0] }} </td>
+               <td> {{ value[1] }} </td>
             </tr>
          {% endfor %}
       </table>

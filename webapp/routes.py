@@ -28,9 +28,12 @@ def text_forms_enable():
                     flash('Language mismatch: "{0}" was inserted in "{1}" form'.format(iso2, k))
                     return render_template('forms.html', filled_forms=text_to_test)
 
-                proceed_data = CalculateXi2Strategy(v, 3)
-                proceed_data.get_expected_array(iso2)
-                texts[k] = (sum(proceed_data.observed_values), sum(proceed_data.expected_values))
+                treegrams = CalculateXi2Strategy(v, 3, iso2)
+                tree = treegrams.calculate_xi2()
+
+                bigrams = CalculateXi2Strategy(v, 2, iso2)
+                bi = bigrams.calculate_xi2()
+                texts[k] = (tree, bi)
 
             return render_template('raw.html', result=texts)
 
